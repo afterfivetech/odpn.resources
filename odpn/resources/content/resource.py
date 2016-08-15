@@ -19,7 +19,6 @@ from plone.app.textfield import RichText
 
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
-#from plone.multilingualbehavior.directives import languageindependent
 from collective import dexteritytextindexer
 
 from odpn.resources import MessageFactory as _
@@ -27,10 +26,10 @@ from odpn.resources import MessageFactory as _
 
 # Interface class; used to define content-type schema.
 
-class IResourceItem(form.Schema, IImageScaleTraversable):
+class IResource(form.Schema, IImageScaleTraversable):
     """
-    Resource Item
+    Resource
     """
     pass
 
-alsoProvides(IResourceItem, IFormFieldProvider)
+alsoProvides(IResource, IFormFieldProvider)

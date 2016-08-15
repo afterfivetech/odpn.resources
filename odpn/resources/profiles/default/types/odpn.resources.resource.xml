@@ -1,28 +1,27 @@
 <?xml version="1.0"?>
-<object name="odpn.resources.resourceitem"
+<object name="odpn.resources.resource"
    meta_type="Dexterity FTI"
    i18n:domain="odpn.resources" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">Resource Item</property>
+  <property name="title" i18n:translate="">Resource</property>
   <property name="description"
-    i18n:translate="">Resource Item</property>
+    i18n:translate="">Resource</property>
   <property name="icon_expr">string:${portal_url}/document_icon.png</property>
-  <property name="factory">odpn.resources.resourceitem</property>
-  <property name="global_allow">False</property>
+  <property name="factory">odpn.resources.resource</property>
+  <property name="global_allow">True</property>
   <property name="filter_content_types">False</property>  
   <property name="allowed_content_types" />
   <property name="allow_discussion">False</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">odpn.resources.content.resource_item.IResourceItem</property> 
+  <property name="schema">odpn.resources.content.resource.IResource</property> 
   <property name="klass">plone.dexterity.content.Item</property>
   <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
      <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
      <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
-     <!--element value="plone.multilingualbehavior.interfaces.IDexterityTranslatable"/-->
-     <!--element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/-->
+     <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
      <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
      <element value="plone.app.versioningbehavior.behaviors.IVersionable"/>
    </property>

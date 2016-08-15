@@ -1,12 +1,12 @@
 from five import grok
 from plone.directives import dexterity, form
-from odpn.resources.content.resources import IResources
+from odpn.resources.content.resource import IResource
 
 grok.templatedir('templates')
 
 class Index(dexterity.DisplayForm):
-    grok.context(IResources)
+    grok.context(IResource)
     grok.require('zope2.View')
-    grok.template('resources_view')
+    grok.template('resource_view')
     grok.name('view')
 
