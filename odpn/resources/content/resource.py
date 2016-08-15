@@ -18,18 +18,14 @@ from plone.namedfile.field import NamedBlobImage, NamedBlobFile
 from plone.app.textfield import RichText
 
 from z3c.relationfield.schema import RelationList, RelationChoice
-from plone.formwidget.contenttree import ObjPathSourceBinder
 from collective import dexteritytextindexer
 
 from odpn.resources import MessageFactory as _
-
+from plone.app.contenttypes.content import File
 
 # Interface class; used to define content-type schema.
-
-class IResource(form.Schema, IImageScaleTraversable):
+class IResource(File):
+    """Convenience subclass for ``File`` portal type
     """
-    Resource
-    """
-    pass
+   
 
-alsoProvides(IResource, IFormFieldProvider)
