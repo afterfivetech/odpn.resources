@@ -15,16 +15,13 @@
   <property name="allow_discussion">False</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">odpn.resources.content.resource.IResource</property> 
-  <property name="klass">plone.dexterity.content.Item</property>
+  <property name="schema"/>
+  <property name="model_source"/>
+  <property name="model_file">plone.app.contenttypes.schema:file.xml</property>
+  <property name="klass">odpn.resources.content.resource.IResource</property>
+
   <property name="behaviors">
-     <element value="plone.app.content.interfaces.INameFromTitle" />
-     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
-     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
-     <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
-     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
-     <element value="plone.app.versioningbehavior.behaviors.IVersionable"/>
-   </property>
+  </property>
 
   <!-- View information -->
   <property name="link_target"></property>
