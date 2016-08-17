@@ -21,6 +21,7 @@
   <property name="klass">odpn.resources.content.resource.IResource</property>
 
   <property name="behaviors">
+    <element value="odpn.resources.behavior.resource.IResourceExtender"/>
   </property>
 
   <!-- View information -->
