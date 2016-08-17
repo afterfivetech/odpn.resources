@@ -6,4 +6,12 @@
 
     <!-- -*- extra stuff goes here -*- -->
 
+    <plone:behavior
+        title="ODPN Resource"
+        description="ODPN Resource Extender"
+        provides=".resource.IResourceExtender"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        marker=".resource.IResourceExtender"
+        />
+
 </configure>
