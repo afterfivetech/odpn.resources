@@ -22,6 +22,7 @@
 
   <property name="behaviors">
     <element value="odpn.resources.behavior.resource.IResourceExtender"/>
+    <element value="plone.app.dexterity.behaviors.filename.INameFromFileName"/>
   </property>
 
   <!-- View information -->
